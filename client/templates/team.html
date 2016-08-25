@@ -1,17 +1,17 @@
-<template name="partners">
+<template name="team">
 
 	<div class="row">
 		<div class="sixteen wide column">
 			<h2 class="supporter">
-				{{_ "This episode supported by"}}
+				{{_ "Team members"}}
 			</h2>
 		</div>
 	</div>
 				
-	<div class="ui stackable doubling six column grid container">
+	<div class="ui stackable doubling fourteen column grid container">
 		{{#if Template.subscriptionsReady}}
-			{{#each partners}}
-				{{> partner}}
+			{{#each team}}
+				{{> teamSingle}}
 			{{/each}}
 		{{else}}
 			<div class="column">
@@ -26,14 +26,10 @@
 	
 </template>
 
-<template name="partner">
+<template name="teamSingle">
 	<div class="column">
-		<div class="ui segment">
-			<div class="ui fluid image" id="{{slug}}">
-		      	<a href="#">
-		      		<img src="{{image.url}}" class="fade" />
-		      	</a>
-		    </div>
-		</div>
+		<div class="ui circular fluid image" id="{{slug}}">
+	      	<img src="{{image.url}}" />
+	    </div>
 	</div>
 </template>

@@ -2,9 +2,7 @@ Template.projects.onCreated(() => {
 	Meteor.subscribe('projects');
 });
 
-Template.projects.onRendered(function () {
-	//$('.ui.fluid.image img').addClass('fade');
-	console.log(this);
+Template.project.onRendered(function () {
 	$('#' + this.data.slug).vide(this.data.trailer);
 });
 

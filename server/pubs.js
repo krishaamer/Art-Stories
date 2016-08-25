@@ -15,3 +15,9 @@ Meteor.publish('partners', () => {
     sort: {order: 1}
   });
 });
+
+Meteor.publish('team', () => {
+  return Team.find({}, { 
+    sort: {order: 1}
+  });
+});

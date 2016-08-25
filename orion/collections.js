@@ -36,6 +36,49 @@ Partners.attachSchema(new SimpleSchema({
 }));
 
 
+Team = new orion.collection('team', {
+  singularName: "Team",
+  pluralName: "Team",
+  title: "Team",
+  link: {
+    title: "Team"
+  },
+  tabular: {
+    columns: [
+      { data: 'order', title: "Sort Order" },
+      orion.attributeColumn('image', 'image', "Photo"),
+      { data: 'name', title: "Name" },
+    ]
+  }
+});
+
+Team.attachSchema(new SimpleSchema({
+  name: {
+    type: String,
+    label: "Name",
+    optional: false
+  },
+  order: {
+    type: Number,
+    label: "Sort Order",
+    optional: false
+  },
+  role: {
+    type: String,
+    label: "Role",
+    optional: true
+  },
+  image: orion.attribute('image', {
+      label: "Logo",
+      optional: true
+  }),
+  createdBy: orion.attribute('createdBy'),
+  createdAt: orion.attribute('createdAt'),
+  updatedBy: orion.attribute('updatedBy'),
+  updatedAt: orion.attribute('updatedAt')
+}));
+
+
 Projects = new orion.collection('projects', {
   singularName: "Project",
   pluralName: "Projects",

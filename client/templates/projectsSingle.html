@@ -25,14 +25,14 @@
 					<div class="eight wide column">
 						{{#if painting}}
 							<h2 class="supporter">
-								{{_ "Painting"}}:
+								{{_ "Painting"}}
 							</h2>
 							<div class="ui fluid image">
 								<img src="{{painting.url}}" data-action="zoom" />
 							</div>
 						{{else}}
 							<h2 class="supporter">
-								{{_ "Painting"}}:
+								{{_ "Painting"}}
 							</h2>
 							<div class="ui fluid image">
 								<img src="{{image.url}}" data-action="zoom" />
@@ -42,19 +42,21 @@
 					<div class="eight wide column">
 						{{#if video}}
 						<h2 class="supporter">
-							{{_ "Film"}}:
+							{{_ "Film"}}
 						</h2>
 						{{> videoPlayer}}
 						{{/if}}
 					</div>
 				</div>
 
+				{{> team}}
+
 			  	{{> partners}}
 
 			  	<div class="row">
 					<div class="sixteen wide column">
 						<h1 class="title center">
-							{{_ "More art"}}:
+							{{_ "More art"}}
 						</h1>
 					</div>
 				</div>
