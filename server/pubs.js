@@ -11,13 +11,17 @@ Meteor.publish('about', () => {
 });
 
 Meteor.publish('partners', () => {
-  return Partners.find({}, { 
+  return Partners.find({}, {
     sort: {order: 1}
   });
 });
 
 Meteor.publish('team', () => {
-  return Team.find({}, { 
+  return Team.find({}, {
     sort: {order: 1}
   });
+});
+
+Meteor.publish('secrets', () => {
+  return Secrets.find({});
 });

@@ -20,7 +20,6 @@
 				  	<div class="three wide column"></div>
 				</div>
 
-				
 				<div class="row">
 					<div class="eight wide column">
 						{{#if painting}}
@@ -51,16 +50,18 @@
 
 				{{> team}}
 
-			  	{{> partners}}
+				{{#if secret}}
+			  		{{> partners}}
+				{{/if}}
 
-			  	<div class="row">
+				<div class="row">
 					<div class="sixteen wide column">
 						<h1 class="title center">
 							{{_ "More art"}}
 						</h1>
 					</div>
 				</div>
-			
+
 			{{/with}}
 		{{else}}
 			<div class="row">
