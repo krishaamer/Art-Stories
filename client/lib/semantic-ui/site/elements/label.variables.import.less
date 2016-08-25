@@ -1,0 +1,22 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+
+
+/* Ribbon */
+@ribbonTriangleSize: 1.2em;
+@ribbonShadowColor: rgba(0, 0, 0, 0.15);
+
+@ribbonMargin: 0rem;
+@ribbonOffset: ~"calc("-@ribbonMargin~" - "@ribbonTriangleSize~")";
+@ribbonDistance: ~"calc("@ribbonMargin~" + "@ribbonTriangleSize~")";
+@rightRibbonOffset:  ~"calc(105% + "@ribbonMargin~" + "@ribbonTriangleSize~")";
+
+@ribbonImageTopDistance: 0rem;
+@ribbonImageMargin: -0.05rem; /* Rounding Offset on Triangle */
+@ribbonImageOffset: ~"calc("-@ribbonImageMargin~" - "@ribbonTriangleSize~")";
+@rightRibbonImageOffset:  ~"calc(105% + "@ribbonImageMargin~" + "@ribbonTriangleSize~")";
+
+@ribbonTableMargin: @relativeMini; /* Rounding Offset on Triangle */
+@ribbonTableOffset: ~"calc("-@ribbonTableMargin~" - "@ribbonTriangleSize~")";
+@rightRibbonTableOffset:  ~"calc(105% + "@ribbonTableMargin~" + "@ribbonTriangleSize~")";

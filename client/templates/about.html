@@ -1,0 +1,23 @@
+<template name="about">
+	<div class="ui grid container">
+		<div class="row">
+			<div class="column"></div>
+			<div class="fourteen wide column">
+				<div class="ui basic segment" id="about">
+					{{#if Template.subscriptionsReady}}
+						{{#each about}}
+							{{{renderMarkdown body}}}
+						{{/each}}
+					{{else}}
+						<div class="ui segment">
+							<div class="ui active inverted dimmer">
+								<div class="ui text loader">{{_ "Loading data"}}</div>
+							</div>
+						</div>
+					{{/if}}
+			    </div>
+		  	</div>
+		  	<div class="column"></div>
+		</div>
+	</div>
+</template>

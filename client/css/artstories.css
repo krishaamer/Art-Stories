@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'Flood Std';
+    src: url('/fonts/FloodStd/FloodStd.eot');
+    src: url('/fonts/FloodStd/FloodStd.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/FloodStd/FloodStd.woff2') format('woff2'),
+        url('/fonts/FloodStd/FloodStd.woff') format('woff'),
+        url('/fonts/FloodStd/FloodStd.ttf')  format('truetype'),
+        url('/fonts/FloodStd/FloodStd.svg#svgFontName') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* , * :before, * :after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+div#__blaze-root {
+    /* border: 7px #fff solid;
+    height: 100%;
+    max-height: 100%; */
+}
+
+html {
+    height: 100%;
+    max-height: 100%;
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 2.1rem;
+    line-height: 1.6rem;
+    height: 100%;
+    max-height: 100%;
+    /*background: #f5ecdd !important;*/
+    background: #fff;
+    /* background: #111 !important; */
+    font-style: normal;
+    /*
+    font-weight: 500;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-font-feature-settings: "liga" on;
+    */
+    color: #162225 !important;
+   /* color: #fff !important; */
+}
+
+p {
+    line-height: 4rem;
+}
+
+.ui.large.menu {
+    font-size: 2.1rem;
+    font-family: 'Noto Serif', sans-serif;
+    text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Flood Std', sans-serif;
+    text-rendering: optimizeLegibility;
+}
+
+h1,h1 a {
+    font-size: 7rem;
+    font-weight: 500;
+    color: #DF0302;
+}
+
+h1.title {
+	font-size: 10rem;
+    font-weight: 500;
+    color: #333;
+    /* color: #000; */
+}
+
+.ui.segment {
+	margin: 0 !important;
+}
+
+h2, h2 a {
+    font-size: 5rem;
+    color: #333;
+    /* color: #fff; */
+}
+
+p {
+    font-family: 'Noto Serif', serif;
+    font-size: 2.1rem;
+    text-rendering: optimizeLegibility;
+}
+
+#about p {
+    font-family: 'Noto Serif', serif;
+    font-size: 2.7rem !important;
+    text-rendering: optimizeLegibility;
+}
+
+p a {
+    font-family: 'Flood Std', sans-serif;
+    /* color: #fff; */
+}
+
+a {
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    font-weight: 500;
+}
+a.active {
+    font-weight: bold;
+}
+
+.center {
+    text-align: center;
+}
+
+.site-title, .site-title a, .supporter, .supporter a  {
+    font-size: 5rem;
+    color: #333;
+    font-family: 'Flood Std', sans-serif;
+    font-size: 2.1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+p ::selection,  {
+    background: #FFFF00
+}
+::-moz-selection {
+    background: #FFFF00
+}
+
+.fade {
+   opacity: 1;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+   }
+
+.fade:hover {
+  opacity: 0;
+}

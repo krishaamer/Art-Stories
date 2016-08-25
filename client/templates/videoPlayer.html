@@ -1,0 +1,11 @@
+<template name="videoPlayer">
+	{{#if Template.subscriptionsReady}}
+		<div class="ui embed"></div>
+	{{else}}
+		<div class="ui segment">
+			<div class="ui active inverted dimmer">
+				<div class="ui text loader">{{_ "Loading data"}}</div>
+			</div>
+		</div>
+	{{/if}}
+</template>

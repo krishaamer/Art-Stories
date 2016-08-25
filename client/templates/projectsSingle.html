@@ -1,0 +1,75 @@
+<template name="projectsSingle">
+	<div class="ui stackable grid container">
+		{{#if Template.subscriptionsReady}}
+			{{#with project}}
+				<div class="row">
+					<div class="three wide column"></div>
+					<div class="ten wide column" style="padding-top:20px;">
+						<p>
+							{{{renderMarkdown body}}}
+						</p>
+						<p>
+							{{{bio}}}
+						</p>
+						{{#if link}}
+							<p>
+								<a href="{{link}}" target="_blank">{{linkFormat link}}</a>
+							</p>
+						{{/if}}
+				  	</div>
+				  	<div class="three wide column"></div>
+				</div>
+
+				
+				<div class="row">
+					<div class="eight wide column">
+						{{#if painting}}
+							<h2 class="supporter">
+								{{_ "Painting"}}:
+							</h2>
+							<div class="ui fluid image">
+								<img src="{{painting.url}}" data-action="zoom" />
+							</div>
+						{{else}}
+							<h2 class="supporter">
+								{{_ "Painting"}}:
+							</h2>
+							<div class="ui fluid image">
+								<img src="{{image.url}}" data-action="zoom" />
+							</div>
+							{{/if}}
+					</div>
+					<div class="eight wide column">
+						{{#if video}}
+						<h2 class="supporter">
+							{{_ "Film"}}:
+						</h2>
+						{{> videoPlayer}}
+						{{/if}}
+					</div>
+				</div>
+
+			  	{{> partners}}
+
+			  	<div class="row">
+					<div class="sixteen wide column">
+						<h1 class="title center">
+							{{_ "More art"}}:
+						</h1>
+					</div>
+				</div>
+			
+			{{/with}}
+		{{else}}
+			<div class="row">
+				<div class="sixteen wide column">
+					<div class="ui segment">
+					  <div class="ui active inverted dimmer">
+					    <div class="ui text loader">{{_ "Loading data"}}</div>
+					  </div>
+					</div>
+				</div>
+			</div>
+		{{/if}}
+	</div>
+</template>

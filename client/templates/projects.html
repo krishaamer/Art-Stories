@@ -1,0 +1,47 @@
+<template name="projects">
+	<div class="ui stackable doubling three column grid container">
+		{{#if Template.subscriptionsReady}}
+			{{#each projects}}
+				{{> project}}
+			{{/each}}
+		{{else}}
+			<div class="column">
+				<div class="ui segment">
+					<div class="ui active inverted dimmer">
+						<div class="ui text loader">{{_ "Loading data"}}</div>
+					</div>
+				</div>
+			</div>
+		{{/if}}
+	</div>
+</template>
+
+<template name="project">
+	<div class="column">
+		<div class="ui fluid card">
+			<div class="ui fluid image" id="{{slug}}">
+		      	<a href="/{{slug}}">
+		      		<img src="{{image.url}}" class="fade" />
+		      	</a>
+		    </div>
+			<div class="content">
+				<h2 class="name">
+					<a href="/{{slug}}">“{{title}}”</a>	
+				</h2>
+				<p>
+					{{subtitle}}
+				</p>
+	  		</div>
+  		    <div class="extra content">
+  		    	<span class="left floated">
+  		    		{{#if views}}
+		        		<a href="https://www.facebook.com/PEKAGBOOM/videos/vb.231695713528433/1073454956019167/?type=2&theater">{{views}} {{_ "views"}}</a>
+		     		{{/if}}
+		     	</span>
+  		    	<span class="right floated">
+		        	{{status}}
+		      	</span>
+		   </div>
+		</div>
+	</div>
+</template>
