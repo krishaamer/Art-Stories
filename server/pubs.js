@@ -1,17 +1,17 @@
 Meteor.publish('projects', () => {
-  return Projects.find({}, {
-    sort: {timestamp: -1}
-  });
+  return Projects.find({});
 });
 
 Meteor.publish('projects.single', (slug) => {
-  return Projects.find({slug: slug}, { 
-    fields: {} 
-  });
+  return Projects.find({slug: slug});
 });
 
 Meteor.publish('about', () => {
-  return About.find({}, { 
-    sort: {timestamp: -1}
+  return About.find({});
+});
+
+Meteor.publish('partners', () => {
+  return Partners.find({}, { 
+    sort: {order: 1}
   });
 });
