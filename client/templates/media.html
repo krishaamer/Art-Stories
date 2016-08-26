@@ -1,0 +1,33 @@
+<template name="media">
+
+	<div class="row">
+		<div class="sixteen wide column">
+			<h2 class="supporter">
+				{{_ "Team members"}}
+			</h2>
+		</div>
+	</div>
+				
+	<div class="ui stackable doubling grid container">
+		{{#if Template.subscriptionsReady}}
+			<ul>
+			{{#each media}}
+				{{> mediaSingle}}
+			{{/each}}
+			</ul>
+		{{else}}
+			<div class="sixteen wide column">
+				<div class="ui segment">
+					<div class="ui active inverted dimmer">
+						<div class="ui text loader">{{_ "Loading data"}}</div>
+					</div>
+				</div>
+			</div>
+		{{/if}}
+	</div>
+	
+</template>
+
+<template name="mediaSingle">
+	<li><a href="{{url}}">{{title}}</a>
+</template>

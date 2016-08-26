@@ -35,6 +35,38 @@ Partners.attachSchema(new SimpleSchema({
   updatedAt: orion.attribute('updatedAt')
 }));
 
+Media = new orion.collection('media', {
+  singularName: "Media",
+  pluralName: "Media",
+  title: "Media",
+  link: {
+    title: "Media"
+  },
+  tabular: {
+    columns: [
+      { data: 'title', title: "Title" },
+      { data: 'url', title: "URL" }
+    ]
+  }
+});
+
+Media.attachSchema(new SimpleSchema({
+  title: {
+    type: String,
+    label: "Title",
+    optional: false
+  },
+  url: {
+    type: String,
+    label: "URL",
+    optional: false
+  },
+  createdBy: orion.attribute('createdBy'),
+  createdAt: orion.attribute('createdAt'),
+  updatedBy: orion.attribute('updatedBy'),
+  updatedAt: orion.attribute('updatedAt')
+}));
+
 Secrets = new orion.collection('secrets', {
   singularName: "Secret",
   pluralName: "Secrets",

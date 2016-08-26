@@ -25,3 +25,8 @@ Meteor.publish('team', () => {
 Meteor.publish('secrets', () => {
   return Secrets.find({});
 });
+
+Meteor.publish('media', () => {
+  return Media.find({});
+});
+
