@@ -106,7 +106,7 @@ nicolaslopezj:reactive-templates@1.2.1
 nicolaslopezj:roles@2.4.0
 nicolaslopezj:router-layer@0.0.11
 npm-bcrypt@0.9.1
-npm-mongo@1.5.48
+npm-mongo@1.5.49
 oauth@1.1.11
 oauth2@1.1.10
 observe-sequence@1.0.12

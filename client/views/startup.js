@@ -1,6 +1,6 @@
 Meteor.startup(() => {
-	
-  Status.setTemplate('semantic_ui');
+
+	Status.setTemplate('semantic_ui');
 
 	var userLang = navigator.language || navigator.userLanguage,
 	availLang = TAPi18n.getLanguages();

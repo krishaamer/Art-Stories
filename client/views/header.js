@@ -72,36 +72,3 @@ Template.header.helpers({
     return Meteor.user().profile.first_name;
   }
 });
-
-
-Template.header.events({
-  "click #logout": (err, tmpl) => {
-
-    Meteor.logout((err) => {      
-      if (err) {
-        analytics.track("Logout error");
-        
-      } else {
-        analytics.track("Logout success");
-      }
-    })
-  },
-  "click #login": (err, tmpl) => {
-    
-    analytics.track("Login Clicked");
-    
-    Meteor.loginWithFacebook({ 
-      requestPermissions: ['email']},
-      function (err) {
-        if (err) {
-          analytics.track("Login failed", {
-            problem: err,
-            why: err.reason
-          });
-          
-        } else {
-          analytics.track("Login success");
-        }
-    });
-  }
-});
