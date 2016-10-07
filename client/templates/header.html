@@ -27,24 +27,20 @@
 
 	<div class="ui basic very padded center aligned segment" style="padding-top:5px;padding-bottom:0px;">
 		<div class="ui large secondary menu">	
-			<div class="menu">
-				<div class="item">
-					<p>{{> status}}</p>
-				</div>
+			<div class="item">
+				<p>{{> status}}</p>
 			</div>
-			<div class="menu right">
-				<div class="item">
-					<div class="ui language floating dropdown link item">
-					  <div class="text">{{i18n_currentLanguage.name}}</div>
-					  <div class="menu">
-					  	<div class="item" data-value="et">Eesti</div>
-					    <div class="item" data-value="en">English</div>
-					    <div class="item" data-value="pt">Português</div>
-					    <div class="item" data-value="zh">中文</div>
-					  </div>
-					</div>	
+			<div class="ui dropdown right item">
+			  	<div class="text">
+			  		<i class="fa fa-cog" aria-hidden="true"></i>
+			 	</div>
+				<div class="menu">
+				  	<div class="item" data-value="et">Eesti</div>
+				    <div class="item" data-value="en">English</div>
+				    <div class="item" data-value="pt">Português</div>
+				    <div class="item" data-value="zh">中文</div>
 				</div>
-			</div> 
+			</div>	
 		</div>
 	</div>
 

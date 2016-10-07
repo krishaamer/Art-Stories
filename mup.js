@@ -1,13 +1,13 @@
 module.exports = {
   servers: {
     one: {
-      host: '46.101.115.43',
+      host: '46.101.225.192',
       username: 'root',
       password: 'tereTalv6'
     }
   },
   meteor: {
-    name: 'ArtStories',
+    name: 'www.artstories.gallery',
     path: '.',
     servers: {
       one: {}
@@ -16,18 +16,16 @@ module.exports = {
       serverOnly: true,
     },
     env: {
-      ROOT_URL: 'http://46.101.115.43',
-      PORT: 4000,
-      MONGO_URL: 'mongodb://localhost/meteor'
+      ROOT_URL: 'https://www.artstories.gallery',
+      PORT: 5000,
+      MONGO_URL: 'mongodb://kunstilood:ysun8atowY@ds029665.mlab.com:29665/artstories'
+    },
+    ssl: {
+     crt: 'ssl.pem',
+     key: 'private.pem',
+     port: 443
     },
     dockerImage: 'abernix/meteord:base',
     deployCheckWaitTime: 90
-  },
-  mongo: {
-    oplog: true,
-    port: 27017,
-    servers: {
-      one: {},
-    },
   }
 };
