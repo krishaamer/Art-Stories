@@ -44,9 +44,9 @@ if(Meteor.absoluteUrl() == "http://localhost:3000/"){
 	{ service: "facebook" },
 	  {
 	    $set: {
-	      appId: "1613725145554917",
+	      appId: Meteor.settings["public"].facebook.appIdDev,
 	      loginStyle: "popup",
-	      secret: "abf743e3c480aa4894cb474fdf2f3192"
+	      secret: Meteor.settings["private"].facebook.appSecretDev
 	    }
 	  }
 	);
@@ -57,14 +57,13 @@ if(Meteor.absoluteUrl() == "http://localhost:3000/"){
 	{ service: "facebook" },
 	  {
 	    $set: {
-	      appId: "1607296829531082",
+	      appId: Meteor.settings["public"].facebook.appId,
 	      loginStyle: "popup",
-	      secret: "4b17ab078aaee007dd0a0ad7b1645839"
+	      secret: Meteor.settings["private"].facebook.appSecret
 	    }
 	  }
 	);
 }
-
 Meteor.publish("current_user_data", function () {
 	return Meteor.users.find({_id: this.userId},
 		{fields: {'profile.first_name': 1, 'profile.last_name': 1, 'profile.picture': 1}});
